@@ -1,0 +1,120 @@
+:root {
+    --font-family : "Figtree", sans-serif;
+    --font-size-base : 16px;
+
+    --yellow : hsl(47, 88%, 63%);
+    --white : hsl(0, 0%, 100%);
+    --gray-500 : hsl(0, 0%, 42%);
+    --gray-950 : hsl(0, 0%, 7%);
+
+    --bg-color : var(--yellow);
+    --bg-card : var(--white);
+    --text-main : var(--gray-950);
+    --text-muted : var(--gray-500);
+
+    --text-weight-normal : 500;
+    --text-weight-bold : 800;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.card-text {
+    font-size: var(--font-size-base);
+    font-family: var(--font-family);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    padding: 0 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--bg-card);
+    color: var(--text-main);
+    border: 1px solid var(--gray-950);
+    border-radius: 20px;
+    max-width: 384px;
+    max-height: 522px;
+    box-shadow: 10px 10px rgba(0, 0, 0, 1);
+    margin:10% auto;
+}
+
+.img-main {
+    margin: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 10px;
+}
+
+.state {
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: var(--text-weight-bold);
+    margin: 0.5rem 1.5rem 0.5rem;
+    border: 1px solid var(--bg-color);
+    border-radius: 4px;
+    padding: 4px 12px;
+    background-color: var(--bg-color);
+    max-width: fit-content; 
+}
+
+.date {
+    margin: 1rem 1.5rem 0.5rem;
+}
+
+.title {
+    margin: 1rem 1.5rem 1rem 1.5rem;
+    font-size: 1.3rem;
+    font-weight: var(--text-weight-bold);
+    line-height: 1.2;
+}
+
+.title:hover {
+    color: var(--bg-color);
+    cursor: pointer;
+}
+
+.description {
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin: 0 0.5rem 1.5rem 1.5rem;
+    vertical-align: middle;
+}
+
+.author {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 0.25rem;
+    font-weight: var(--text-weight-bold);
+    font-size: 0.8rem;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.75rem;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin: 35% auto;
+    width: 90%;
+  }
+}
